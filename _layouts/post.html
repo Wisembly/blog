@@ -1,0 +1,43 @@
+---
+layout: default
+---
+
+<div class="post">
+  <h1 class="post-title">{{ page.title }}</h1>
+  <span class="post-date">{{ page.date | date_to_string }}</span>
+  {{ content }}
+</div>
+
+<div class="author">
+  <span class="gravatar">
+      <img src="http://www.gravatar.com/avatar/{{ site.authors[page.author].gravatar }}?s=60"/>
+  </span>
+  <span class="name">
+      <strong>{% if site.authors[page.author] %}{{ site.authors[page.author].name }}{% else %}{{ page.author }}{% endif %}</strong>
+      <br/>
+      {% if site.authors[page.author].twitter %}
+        <a target="_blank" href="http://twitter.com/{{ site.authors[page.author].twitter }}">@{{ site.authors[page.author].twitter }}</a>
+      {% endif %}
+      {% if site.authors[page.author].twitter %}
+        <br/><a target="_blank" href="{{ site.authors[page.author].web }}">{{ site.authors[page.author].web }}</a>
+      {% endif %}
+  </span>
+</div>
+
+<span class="clearfix"></span>
+
+<div class="related">
+  <h2>Related Posts</h2>
+  <ul class="related-posts">
+    {% for post in site.related_posts limit:site.related_limit %}
+      <li>
+        <h3>
+          <a href="{{ post.url }}">
+            {{ post.title }}
+            <small>{{ post.date | date_to_string }}</small>
+          </a>
+        </h3>
+      </li>
+    {% endfor %}
+  </ul>
+</div>

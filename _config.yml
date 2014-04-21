@@ -1,0 +1,32 @@
+# Dependencies
+markdown:           redcarpet
+pygments:           true
+
+# Permalinks
+permalink:          pretty
+
+# Setup
+title:              Wisembly
+tagline:            'Enlight developement'
+description:        'Random Wisembly developpers thoughts and more or less useful findings..'
+url:                http://hyde.getpoole.com
+
+authors:
+  guillaumepotier:
+    name:           Guillaume Potier
+    display_name:   guillaumepotier
+    gravatar:       d9297b88ef842ae8ccc562ad3b4cc1e1
+    email:          guillaume@wisembly.com
+    web:            http://imctobitch.com
+    twitter:        guillaumepotier
+    github:         guillaumepotier
+
+paginate:           5
+related_limit:      3
+
+# Custom vars
+version:            0.0.1
+
+urls:
+  github:           https://github.com/wisembly
+  corpo:            http://wisembly.com

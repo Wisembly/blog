@@ -1,0 +1,49 @@
+/* General */
+@media (min-width: 58rem) {
+  html {
+    font-size: 18px;
+  }
+}
+
+.clearfix {
+  clear: both;
+  display: inline-block;
+}
+
+/* Sidebar */
+.sidebar-about h1 {
+  margin: 0 0 0 -15px;
+  padding: 0;
+}
+
+.sidebar-nav {
+  margin-top: 20px;
+}
+
+
+/* Posts */
+.page, .post {
+  margin-bottom: 2em;
+}
+
+.author {
+    height: 40px;
+    margin: 10px;
+}
+
+.author .gravatar {
+    display: block;
+    float: left;
+}
+
+.author .name {
+    display: block;
+    margin-left: 75px;
+    height: 40px;
+    line-height: 22px;
+}
+
+.author .name a {
+    font-size: 15px;
+    text-decoration: none;
+}

@@ -1,3 +1,9 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600);
+
+html {
+  font-family: 'Open Sans', sans-serif;
+}
+
 /* General */
 @media (min-width: 58rem) {
   html {
@@ -11,6 +17,16 @@
 }
 
 /* Sidebar */
+
+h1 {
+  display: none;
+}
+
+.sidebar {
+  background: #07698D;
+  color: #46B489;
+}
+
 .sidebar-about h1 {
   margin: 0 0 0 -15px;
   padding: 0;

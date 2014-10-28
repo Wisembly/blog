@@ -10,7 +10,7 @@ Hi there!
 
 During the last 3 years, here, at Wisembly, we strove to make the best code possible and the more robust web solution for our beloved clients.
 
-Open source in mind, we relased some of our work, with [Elephant.io][elephant] or [ExcelAnt][excelant] for example.
+Open source in mind, we released some of our work, with [Elephant.io][elephant] or [ExcelAnt][excelant] for example.
 
 Here, we'll try to share useful snippets and share some tech discovers we made during our awesome journey.
 

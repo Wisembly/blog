@@ -1,5 +1,5 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600);
-
+/*@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600);
+*/
 html {
   font-family: 'Open Sans', sans-serif;
 }
@@ -28,18 +28,36 @@ h1 {
 
 .sidebar {
   background: #07698D;
-  color: #46B489;
+  color: #ffffff;
 }
+
+@media (max-width: 30rem) {
+  .logo {
+    max-width: 200px;
+    margin: 0 auto;
+  }
+}
+
 
 .sidebar-about h1 {
   margin: 0 0 0 -15px;
   padding: 0;
 }
 
+.sidebar-about {
+  border-bottom: 1px solid #ffffff;
+  padding-bottom: 1em;
+}
+
 .sidebar-nav {
   margin-top: 20px;
 }
 
+.copyright {
+  border-top: 1px solid #ffffff;
+  padding-top: 1.75em;
+  font-size: .8em;
+}
 
 /* Posts */
 

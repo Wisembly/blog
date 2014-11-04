@@ -31,18 +31,6 @@
  * Update the foundational and global aspects of the page.
  */
 
-@media (min-width: 48rem) {
-  html {
-    font-size: 16px;
-  }
-}
-@media (min-width: 58rem) {
-  html {
-    font-size: 20px;
-  }
-}
-
-
 /*
  * Sidebar
  *

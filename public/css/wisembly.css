@@ -16,6 +16,10 @@ html {
   display: inline-block;
 }
 
+a {
+  color: #f1bc33;
+}
+
 /* Sidebar */
 
 h1 {
@@ -38,8 +42,28 @@ h1 {
 
 
 /* Posts */
+
 .page, .post {
-  margin-bottom: 2em;
+  margin-bottom: 4em;
+}
+
+.post {
+  border-top: 1px solid #07698d;
+  padding-top: 4em;
+}
+
+.post:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.post-title a{
+  color: #07698d;
+}
+
+pre {
+  color: #ffffff;
+  background: #46b489;
 }
 
 .author {

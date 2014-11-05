@@ -32,11 +32,12 @@ Also, with Sketch 3.1, file type and extension were reviewed. Sketchfiles are no
 ### File structure
 Tidy your bedroom, prepare your files and sort them, as done in this example:
   
-	| core
-	|- font *
+	| dist *
 	|- css *
-	|- sketch
+	|- font *
 	|- svg *
+	| src
+	|- sketch
 	|- templates
 
 (*) these folders will be created by Gulp. 

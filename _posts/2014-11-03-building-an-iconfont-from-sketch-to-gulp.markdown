@@ -45,8 +45,8 @@ Tidy your bedroom, prepare your files and sort them, as done in this example:
 ### Plugins
 For our spectific task, we will used the following plugins:
 
-* gulp-sketch
-* gulp-iconfont
+* [gulp-sketch](https://github.com/cognitom/gulp-sketch)
+* [gulp-iconfont](https://github.com/nfroidure/gulp-iconfont)
 * gulp-consolidate
 * gulp-loadash
 
@@ -58,42 +58,56 @@ __Before you launch the task : get your Sketchfile ready by flattening your icon
 
 	gulp.task('icons', function(){
 
-	return gulp.src('src/sketch/icons.sketch')
-	.pipe(sketch({
-		export: 'slices',
-		formats: 'svg',
-		compact: 'yes',
-		saveForWeb: 'yes'
-	}))
-	.pipe(gulp.dest('dist/svg/'))
-	.pipe(iconfont({
-		fontName: 'icons',
-		appendCodepoints: false,
-		normalize: true,
-		centerHorizontally: true,
-		fontHeight: 100 // IMPORTANT
-	}))
-	.on('codepoints', function(codepoints, options) {
-		gulp.src('src/templates/icon-template.css')
-		.pipe(consolidate('lodash', {
-			glyphs: codepoints,
-			fontName: 'WisemblyIconfont',
-			fontPath: '/dist/font/',
-			className: 'icon',
-		}))
-		.pipe(rename('icons.css'))
-		.pipe(gulp.dest('dist/css/'));
-	})
-	.on('codepoints', function(codepoints, options) {
-		gulp.src('src/templates/icon-template-ie.css')
-		.pipe(consolidate('lodash', {
-			glyphs: codepoints,
-			fontName: 'WisemblyIconfont',
-			fontPath: '/dist/font/',
-			className: 'icon',
-		}))
-		.pipe(rename('icons-ie.css'))
-		.pipe(gulp.dest('dist/css/'));
-	})
-	.pipe(gulp.dest('dist/font/'));
+	  return gulp.src('src/sketch/icons.sketch')
+	  
+	  // extracting SVG from Sketchfile
+	  .pipe(sketch({
+	    export: 'slices',
+	    formats: 'svg',
+	    compact: 'yes',
+	    saveForWeb: 'yes'
+	  }))
+	  .pipe(gulp.dest('dist/svg/'))
+	  
+	  // creating SVG, TTF, WOFF, EOT
+	  .pipe(iconfont({
+	    fontName: 'icons',
+	    appendCodepoints: false,
+	    normalize: true,
+	    centerHorizontally: true,
+	    fontHeight: 100 // IMPORTANT
+	  }))
+	  
+	  // creating CSS files and sample page
+	  .on('codepoints', function(codepoints, options) {
+
+	    // options
+	    var iconsOptions = {
+	      glyphs: codepoints,
+	      fontName: 'WisemblyIconfont',
+	      fontPath: '../font/',
+	      className: 'icon',
+	    }
+
+	    // template for modern browsers
+	    gulp.src('src/templates/icon-template.css')
+	    .pipe(consolidate('lodash', iconsOptions))
+	    .pipe(rename('icons.css'))
+	    .pipe(gulp.dest('dist/css/'));
+
+	    // template for IE
+	    gulp.src('src/templates/icon-template-ie.css')
+	    .pipe(consolidate('lodash', iconsOptions))
+	    .pipe(rename('icons-ie.css'))
+	    .pipe(gulp.dest('dist/css/'));
+	  
+	    // creating a sample page
+	    gulp.src('src/templates/icon-template.html')
+	    .pipe(consolidate('lodash', iconsOptions))
+	    .pipe(rename({ basename:'sample' }))
+	    .pipe(gulp.dest('dist/'));
+	  
+	  })
+	  .pipe(gulp.dest('dist/font/'));
+
 	});

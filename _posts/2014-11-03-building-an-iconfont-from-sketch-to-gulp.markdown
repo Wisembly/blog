@@ -97,16 +97,3 @@ __Before you launch the task : get your Sketchfile ready by flattening your icon
 	})
 	.pipe(gulp.dest('dist/font/'));
 	});
-
-### Bonus
-You can do almost the same thing with an artboard of pictos! Have a look on these plugins:
-
-* gulp-sprites
-* gulp-svg2png (IE fallbacking)
-* gulp-imagemin
-
-Sure, HTML markup will need some changes… But you may consider this opportunity:
-
-* to clean your assets folder (FYI, we went from 1.5 Mo to 600 Ko, 4 files instead of 60),
-* to be 100% Retina ready thanks to SVG,
-* to improve performance, just because sprites.

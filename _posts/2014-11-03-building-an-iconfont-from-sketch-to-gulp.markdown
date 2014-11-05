@@ -56,16 +56,16 @@ __Before you launch the task : get your Sketchfile ready by flattening your icon
 
 ### Script
 
-	gulp.task('webfont', function(){
+	gulp.task('icons', function(){
 
-	return gulp.src('sketch/icons.sketch')
+	return gulp.src('src/sketch/icons.sketch')
 	.pipe(sketch({
 		export: 'slices',
 		formats: 'svg',
 		compact: 'yes',
 		saveForWeb: 'yes'
 	}))
-	.pipe(gulp.dest('svg/'))
+	.pipe(gulp.dest('dist/svg/'))
 	.pipe(iconfont({
 		fontName: 'icons',
 		appendCodepoints: false,
@@ -74,28 +74,28 @@ __Before you launch the task : get your Sketchfile ready by flattening your icon
 		fontHeight: 100 // IMPORTANT
 	}))
 	.on('codepoints', function(codepoints, options) {
-		gulp.src('templates/icon-template.css')
+		gulp.src('src/templates/icon-template.css')
 		.pipe(consolidate('lodash', {
 			glyphs: codepoints,
 			fontName: 'WisemblyIconfont',
-			fontPath: '/font/',
+			fontPath: '/dist/font/',
 			className: 'icon',
 		}))
 		.pipe(rename('icons.css'))
-		.pipe(gulp.dest('css/'));
+		.pipe(gulp.dest('dist/css/'));
 	})
 	.on('codepoints', function(codepoints, options) {
-		gulp.src('templates/icon-template-ie.css')
+		gulp.src('src/templates/icon-template-ie.css')
 		.pipe(consolidate('lodash', {
 			glyphs: codepoints,
-			fontName: 'Wisembly Iconfont',
-			fontPath: '/font/',
+			fontName: 'WisemblyIconfont',
+			fontPath: '/dist/font/',
 			className: 'icon',
 		}))
 		.pipe(rename('icons-ie.css'))
-		.pipe(gulp.dest('css/'));
+		.pipe(gulp.dest('dist/css/'));
 	})
-	.pipe(gulp.dest('font/'));
+	.pipe(gulp.dest('dist/font/'));
 	});
 
 ### Bonus

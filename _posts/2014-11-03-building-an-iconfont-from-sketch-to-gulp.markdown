@@ -31,7 +31,7 @@ Also, with Sketch 3.1, file type and extension were reviewed. Sketchfiles are no
 
 ### File structure
 Tidy your bedroom, prepare your files and sort them, as done in this example:
-  
+
 	| dist *
 	|- css *
 	|- font *
@@ -40,7 +40,7 @@ Tidy your bedroom, prepare your files and sort them, as done in this example:
 	|- sketch
 	|- templates
 
-(*) these folders will be created by Gulp. 
+(*) these folders will be created by Gulp.
 
 ### Plugins
 For our spectific task, we will used the following plugins:
@@ -59,7 +59,7 @@ __Before you launch the task : get your Sketchfile ready by flattening your icon
 	gulp.task('icons', function(){
 
 	  return gulp.src('src/sketch/icons.sketch')
-	  
+
 	  // extracting SVG from Sketchfile
 	  .pipe(sketch({
 	    export: 'slices',
@@ -68,7 +68,7 @@ __Before you launch the task : get your Sketchfile ready by flattening your icon
 	    saveForWeb: 'yes'
 	  }))
 	  .pipe(gulp.dest('dist/svg/'))
-	  
+
 	  // creating SVG, TTF, WOFF, EOT
 	  .pipe(iconfont({
 	    fontName: 'icons',
@@ -77,7 +77,7 @@ __Before you launch the task : get your Sketchfile ready by flattening your icon
 	    centerHorizontally: true,
 	    fontHeight: 100 // IMPORTANT
 	  }))
-	  
+
 	  // creating CSS files and sample page
 	  .on('codepoints', function(codepoints, options) {
 
@@ -100,13 +100,13 @@ __Before you launch the task : get your Sketchfile ready by flattening your icon
 	    .pipe(consolidate('lodash', iconsOptions))
 	    .pipe(rename('icons-ie.css'))
 	    .pipe(gulp.dest('dist/css/'));
-	  
+
 	    // creating a sample page
 	    gulp.src('src/templates/icon-template.html')
 	    .pipe(consolidate('lodash', iconsOptions))
 	    .pipe(rename({ basename:'sample' }))
 	    .pipe(gulp.dest('dist/'));
-	  
+
 	  })
 	  .pipe(gulp.dest('dist/font/'));
 

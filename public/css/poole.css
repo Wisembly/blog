@@ -52,11 +52,6 @@ html {
   font-size: 16px;
   line-height: 1.5;
 }
-@media (min-width: 38rem) {
-  html {
-    font-size: 20px;
-  }
-}
 
 body {
   color: #515151;
@@ -307,11 +302,7 @@ tbody tr:nth-child(odd) th {
 }
 
 /* Blog post or page title */
-.page-title,
-.post-title,
-.post-title a {
-  color: #303030;
-}
+
 .page-title,
 .post-title {
   margin-top: 0;

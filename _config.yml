@@ -7,7 +7,7 @@ permalink:          pretty
 
 # Setup
 title:              Wisembly
-tagline:            'Enlight developement'
+tagline:            'Ideas are everywhere'
 description:        'Random Wisembly developpers thoughts and more or less useful findings..'
 
 authors:
@@ -19,6 +19,14 @@ authors:
     web:            http://imctobitch.com
     twitter:        guillaumepotier
     github:         guillaumepotier
+
+  gabrielcousin:
+    name:           Gabriel Cousin
+    display_name:   gabrielcousin
+    gravatar:       f8847fb0b810b70d5fbc8f7b97c266b8
+    email:          gabriel@wisembly.com
+    twitter:        gabrielcousin
+    github:         gabrielcousin
 
 paginate:           5
 related_limit:      3

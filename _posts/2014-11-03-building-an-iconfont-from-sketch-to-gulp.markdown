@@ -47,8 +47,8 @@ For our spectific task, we will used the following plugins:
 
 * [gulp-sketch](https://github.com/cognitom/gulp-sketch)
 * [gulp-iconfont](https://github.com/nfroidure/gulp-iconfont)
-* gulp-consolidate
-* gulp-loadash
+* [gulp-consolidate](https://github.com/timrwood/gulp-consolidate)
+* lodash
 
 You need to have Sketch and Sketchtool installed.
 

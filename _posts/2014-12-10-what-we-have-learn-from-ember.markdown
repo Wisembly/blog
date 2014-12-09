@@ -53,6 +53,8 @@ Ember.js allows you to wrap all of your repeated pieces of code inside component
 
 Don't fear using components in components, the more "organic" your design / approach is, the more modular your components will be. Oh, and you're likely to drink less coffee (think about your health Dude ^^)
 
+Another cool aspect of using components as a front-end developer/UI developer is to list UI oriented ones in a styleguide and, in that way, help developers to test, see regressions and find which ones are available with their parameters.
+
 Ember 2.0 will put even more emphasis on components!
 
 
@@ -70,12 +72,14 @@ Ember 2.0 will put even more emphasis on components!
 + Ember cli is bundled with lots of cool generators following "blueprints" rules that allow you to keep up a good workflow (create the right files, at the right place, create the corresponding basic tests, etc...) There is no way to make a mistake when using generators, which is a very good point for scaling (product + team). Blueprints can be created, so every team can reproduce its own workflow
 + Ember-cli brings its own resolver that provides/allows a way better file architecture (PODs are also possible)
 + The current version (0.1.2) brought Content Security Policy, which is a cool addition if content security is important for your app, and the browsers you target are not yet compatible
-+ Version 0.1.3 will let you create multiple sets of css files. To start with, we'll try ti use it to target specific needs (mobile, desktop, and why not old browsers). We can't wait for the upgrade (but after the beta has launched ^^)
++ Version 0.1.3 will let you create multiple sets of CSS files. To start with, we'll try to use it to target specific needs (mobile, desktop, and why not old browsers). We can't wait for the upgrade (but after the beta has launched ^^)
 
 
 ### NOT THAT COOL points
 - Despites Broccoli has really cool sides, the Brocfile is a bit complicated, and our frontend team is a little reserved. This lacks some documentation too...
-- Sass is too long to be reloaded => NoCSS injection? (but it might change very soon => [see issue #2371 on ember-cli repo](https://github.com/stefanpenner/ember-cli/issues/2371))
+- Broccoli is quite slow compared to Gulp.
+- The fact that it recompile everthing, including JS even if you change only a line of CSS is not good at all.
+- CSS is too long to be live reloaded => No CSS injection? (but it might change very soon => [see issue #2371 on ember-cli repo](https://github.com/stefanpenner/ember-cli/issues/2371))
 - The upgrade process can be a real P.I.A (this is a very very perfectible thing)
 
 

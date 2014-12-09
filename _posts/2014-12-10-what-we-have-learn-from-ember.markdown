@@ -23,15 +23,15 @@ Here is ou humble 3 months real life Ember.js feedback for [Solid](http://getsol
 
 ### Convention over configuration
 
-**First of all, Ember is not like Backbone. It's not a library, it's a framework.**
+**First of all, Ember is not like Backbone. It's a strongly opinionated MVC framework.**
 
-That mean devs accepting to embrace Ember's philosophy will be rewarded by the framework after the learning curve, whereas more sckeptical ones will keep fighting against concepts they may consider odd and won't unlock the framework potential. But hey, nothing new here, that's the same for every opinated framework in any language.
+That means devs accepting to embrace Ember's philosophy will be rewarded by the framework after the learning curve, whereas more sckeptical ones will keep fighting against concepts they may consider odd and won't unlock the true framework potential. But hey, nothing new here, that's the same for every opinated framework in any language.
 
 Using Ember conventions and components will allow you, once masterized, to scale only your business complexity part inside your app with your growing team, instead of handling framework complexity and improvement (rendering, syncing data for example).
 
-We observed that, even in a short 3 months long period window, we took 2 sprints of 2 weeks to set up our application foundations with 2 javascript developers and then handled in the last 2 sprints more features with only one dev that we would ever do in our current Backbone production application. Integrating an authentication mechanism? There's an ember-cli plugin for that. Integrating Google analytics, Intercom or Mixpanel in our app? There are ember plugins for that too.
+We observed that, even in a short 3 months long period window, we took 2 sprints of 2 weeks to set up our application foundations with 2 javascript developers and then handled in the last 2 sprints more features with only one dev that we would ever do in our current Backbone production application. Integrating an authentication mechanism? There's an ember-cli plugin for that. Integrating Google analytics, in our app? There's an ember plugin for that too.
 
-It **feels right** to see in this javascript world with Ember the same benefits we experience with Symfony2 for long now with bundles and plugins that perfectly fit, easy to install or to maintain, thanks to the framework conventions.
+It **feels right** to see in this javascript world with Ember the same benefits we experience with Symfony2 for long now with bundles and plugins that perfectly fit, that are easy to install or to maintain, thanks to the framework rigor and conventions.
 
 
 ### What does that mean for your team and your productivity
@@ -42,18 +42,18 @@ It **feels right** to see in this javascript world with Ember the same benefits 
 - You won't have to maintain core parts of your code. Just keep your project Ember-up-to-date to benefits for latest community features and improvements. Again, no more team time waster to maintain something a community could maintain for you
 
 **Risks**
-- What happens if you integrate an "Angular" dev? Despite the fact that Ember and Angular differs in many ways, their root concepts are not that far, and the new "dev on the block" should feel at home within days (1-2 weeks max)
-- You should consider understanding and using "the ember way" to do things, before trying to customize them => think about tests, future upgrades, and glitches you should introduce in the app because "Hell yeah, i like to customize ALL THE THINGS"
+- What happens if you integrate an Angular dev or a Backbone dev? Despite the fact that Ember and Angular differs in many ways, their root concepts are not that far, and the new "dev on the block" should feel at home within days (1-2 weeks max)
+- You should consider understanding and using "the ember way" to do things, before trying to customize or monkey patch them => think about tests, future upgrades, and glitches you should introduce in the app because "Hell yeah, I like to customize ALL THE THINGS"
+
 
 ### The world is made of components
 
-Do you embrace DRY methodology? Components are your new little friends ;)
+Do you embrace DRY methodology? Components are your new friends ;)
 
-Ember.js allows you to wrap all of your repeated pieces of code inside components. Whether you have repetitive chunks of templates, or UI elements, or event entire parts of your app, you should consider using them.
+Ember.js allows you to wrap all of your repeated pieces of code inside components. Whether you have repetitive templates chunks, or UI elements, or event entire parts of your app, you should consider using them.
+Don't fear using components in components, the more "organic" your design / approach is, the more modular your components would be.
 
-Don't fear using components in components, the more "organic" your design / approach is, the more modular your components will be. Oh, and you're likely to drink less coffee (think about your health Dude ^^)
-
-Another cool aspect of using components as a front-end developer/UI developer is to list UI oriented ones in a styleguide and, in that way, help developers to test, see regressions and find which ones are available with their parameters.
+Another cool aspect of using components as a front-end developer / UI developer is to list UI oriented ones in a styleguide and, in that way, help developers to test, see regressions and find which ones are available with their parameters.
 
 Ember 2.0 will put even more emphasis on components!
 
@@ -70,13 +70,12 @@ But the fact is that our APIs are not fully compatible with it: not fully "JSON 
 In some cases, we still wonder where is the best place to do things, and how to do it.
 For example, let's say you have to implement a global notification center for your app: we're still investigating and iterating to find the best way to do it... Even if a "service" is what sounds like to be the best idea, it is not as simple as it seem...
 
-How does it interact with push events (we make a heavy use of [socket.io](http://socket.io/) ? How does it interact with the "bubbling" of Ember actions ? What if a component has to notify the app of its state ? What if you want your models to auto-notify the user when they are saved / errored ? 
+How does it interact with push events (we make a heavy use of [socket.io](http://socket.io/) ? How does it interact with the "bubbling" of Ember actions ? What if a component has to notify the app of its state ? What if you want your models to auto-notify the user when they are saved / errored ?
 We implemented all of these behaviors but we are not very sure if we did it the right way, and trying to find better methods every day (ok, finally it's pretty normal for devs ^^)
 
+Maybe the "convention over configuration" is not for everyone, and not perfect for every cases. It might be sometimes inevitable to patch or get around things for your business needs and Ember "rigidity" will be more a burden.
 
-
-- Maybe the "convention over configuration" is not for everyone
-- The way components communicate through actions is still very perfectible (notably the `sendAction()` method, which could be very confusing for beginners)
+The way components communicate through actions is still very perfectible (notably the `sendAction()` method, which could be very confusing for beginners)
 
 
 ## Ember cli
@@ -106,28 +105,32 @@ We implemented all of these behaviors but we are not very sure if we did it the 
 - Latest version made a great step towards more performance (those ugly metamorphs Dudes have disappeared) and version 2.0 (HTMLBars) promise to manipulate DOM elements vs strings (as with handlebars)
 
 
+### NOT THAT COOL points
+
+- logic is **very** limited here. Okay, right, 99% of the logic should be made inside controllers, but sometimes we lack some tools and logic features to handle presentation logic that have nothing to do inside our application code, our models nor our controllers. When we say that logic is limited it is even a `AND` or `OR` condition in a `if` statement that is not possible. In fact, controllers are currently more "presenters" than controllers because they embed both application logic and presentation logic.
+
+
+
 ## Ember data
 
 ### COOL POINTS
-  + Various adapters for various ways to use it (wanna use fixtures ? Use fixtureAdapter. Want to use firebase ? Download the firebase adapter, configure and run with a great smile, otherwise stay with the RESTAdapter)
+  + Various adapters for multiple usage ways (wanna use fixtures? Use fixtureAdapter. Want to use firebase? Download the firebase adapter, configure and run with a great smile, otherwise stay with the RESTAdapter)
   + Various methods to easily manage models and records
   + Records flags (isNew, isDirty, isSaving, etc....)
 
 ### NOT THAT COOL points
-  Unleash the kraken!!
-  - very opinionated. Too opinionated maybe? No option could be passed to `save()` etc..
-  - pagination is still an issue for us
-  - implements JSON API, but partially!
+  - **very** opinionated (too opinionated?). No option could be passed to `save()` and other methods, virtually impossible to extend
+  - pagination is still an issue for us today
+  - follow and implements JSON API standard, but partially!
   - lot of monkey patching (if your API is not 100% ember-data compatible)
   - problems with socket.io, updating a model that is not already in collection?
-  - other bullshit things?
 
-  => plan in near future to throw it and re-implement something more modular like we have on Backbone?
+We'd really like to have some time soon to look to that more deeply and consider not using ember data and find / create a data layer more modulable.
 
 
 ## Internationalization
 
-We tried [ember-i18n](https://github.com/jamesarosen/ember-i18n) that was a good start but did not embrace fully gettext philosophy. We had a look to [Jed](slexaxton.github.io/Jed/) and [i18nnext](http://i18next.com/) or [format.js](http://formatjs.io/) but there were too complex, shipped too many unecessary features, or did not follow gettext standards, so we came with our own tiny plugin [ember-gettext](https://github.com/Wisembly/ember-gettext). We'll make in the near future a more complete post about internationalization and gettext / Poedit standards and phylosophy.
+We tried [ember-i18n](https://github.com/jamesarosen/ember-i18n) that was a good start but did not embrace fully gettext philosophy. We had a look to [Jed](slexaxton.github.io/Jed/), [i18nnext](http://i18next.com/) or [format.js](http://formatjs.io/) but there were too complex, shipped too many unecessary features, or did not follow gettext standards. So we came with our own tiny plugin [ember-gettext](https://github.com/Wisembly/ember-gettext). We'll make in the near future a more complete post about internationalization and gettext / Poedit standards and phylosophy.
 
 
 ## Tests
@@ -147,15 +150,10 @@ Understand it will make your life easier (it can bring peace to the world too..)
 
 
 ## Conclusion ?
-[Nico]
-When we begun our POCs (angular.js VS ember.js), I was clearly an Angular guy... My personal tests, and let's admit it, all the hype around Angular were telling me to use and promote Angular.
 
-This was before making a more professional POC with Angular and testing Ember.js a bit deeper!
+When we begun our POCs (angular.js VS ember.js), all the hype around Angular were telling us to use it. We really liked Ember.js and its philosophy. It was more "us", coming from backend for some of us from Symfony or RoR. We liked the robustness of Ember in the shadow of Angular fame and glory.
 
-I really felt in love with Ember.js and all its philosophy (this is not entirely because Tomster is sexy ^^), and enjoy it every day.
+We are very happy with it at the time we write this article, and the future seams quite bright to, Ember.js 2.0 looks as a cool as the next StarWars trailer.
+[Check the road to Ember.js 2.0](https://github.com/emberjs/rfcs/pull/15) and [the discussions about it](https://news.ycombinator.com/item?id=8551897) on HackerNews.
 
-Very happy with it at the time we write this article, the future seams shiny too ;)
-Ember.js 2.0 looks as a cool as the next StarWars trailer.
-[Check the road to Ember.js 2.0](https://github.com/emberjs/rfcs/pull/15) and [the discussions about it](https://news.ycombinator.com/item?id=8551897) on HackerNews
-
-Ember.js really smells like something more strong, complete and SOLID, which happens to be a perfect match for the apps we want to build now and in the future.
+Ember.js really smells like something strong, complete and SOLID, which happens to be a perfect match for the apps we want to build now and in the near future.

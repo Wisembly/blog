@@ -59,7 +59,22 @@ Ember 2.0 will put even more emphasis on components!
 
 
 ### NOT THAT COOL points
-- Before digging deeper into Ember, we heard about its famous "learning curve". Some said it is like climbing a mountain, some compare it to a roller coaster. We tried and, we must admit, it's pretty heavy and almost sinusoidal, but really worth to surf. We've had bad days, and good days. We've had questions, and we still have questions.
+
+Before digging deeper into Ember, we heard about its famous "learning curve". Some said it is like climbing a mountain, some compare it to a roller coaster. We tried and, we must admit, it's pretty heavy and almost sinusoidal, but really worth to surf.
+
+We've had bad days, and good days. We've had questions, and we still have questions...
+
+The first of these questions is about [Ember Data](https://github.com/emberjs/data). It's an awesome library, no doubt about it: well documented, very active, and strong / stable enough for what we want to build.
+But the fact is that our APIs are not fully compatible with it: not fully "JSON API" compliant, and not very modifiable, since they are shared accross our products. Since Ember Data is not very permissive, we've had some headaches. That's why we are wondering if we shall build our own data store/cache/api layer.
+
+In some cases, we still wonder where is the best place to do things, and how to do it.
+For example, let's say you have to implement a global notification center for your app: we're still investigating and iterating to find the best way to do it... Even if a "service" is what sounds like to be the best idea, it is not as simple as it seem...
+
+How does it interact with push events (we make a heavy use of [socket.io](http://socket.io/) ? How does it interact with the "bubbling" of Ember actions ? What if a component has to notify the app of its state ? What if you want your models to auto-notify the user when they are saved / errored ? 
+We implemented all of these behaviors but we are not very sure if we did it the right way, and trying to find better methods every day (ok, finally it's pretty normal for devs ^^)
+
+
+
 - Maybe the "convention over configuration" is not for everyone
 - The way components communicate through actions is still very perfectible (notably the `sendAction()` method, which could be very confusing for beginners)
 

@@ -91,9 +91,9 @@ The way components communicate through actions is still very perfectible (notabl
 
 ### NOT THAT COOL points
 - Despites Broccoli has really cool sides, the Brocfile is a bit complicated, and our frontend team is a little reserved. This lacks some documentation too...
-- Broccoli is quite slow compared to Gulp.
+- Broccoli looks like to be quite slow and less flexible compared to Gulp.
 - The fact that it recompile everthing, including JS even if you change only a line of CSS is not good at all.
-- CSS is too long to be live reloaded => No CSS injection? (but it might change very soon => [see issue #2371 on ember-cli repo](https://github.com/stefanpenner/ember-cli/issues/2371))
+- CSS is too long to be live reloaded and there is no CSS injection (but it might change very soon => [see issue #2371 on ember-cli repo](https://github.com/stefanpenner/ember-cli/issues/2371))
 - The upgrade process can be a real P.I.A (this is a very very perfectible thing)
 
 

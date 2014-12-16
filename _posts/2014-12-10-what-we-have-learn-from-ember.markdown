@@ -10,13 +10,13 @@ categories:
 author:     guillaumepotier
 ---
 
-Here [@Wisembly](http://wisembly.com) we strive to change the way people meet, work and collaborate during meetings. We come from a Symfony2 / Backbone.js / socket.io world with our event / training / conf call products, and when it came to thinking about our next product, [Solid (request beta access here!)](http://getsolid.io), we slowed down things a bit and looked for a different and a better way to manage our frontend application.
+Here [@Wisembly](http://wisembly.com/?utm_source=dev.blog) we strive to change the way people meet, work and collaborate during meetings. We come from a Symfony2 / Backbone.js / socket.io world with our event / training / conf call products, and when it came to thinking about our next product, [Solid (request beta access here!)](http://getsolid.io/?utm_source=dev.blog), we slowed down things a bit and looked for a different and a better way to manage our frontend application.
 
-We looked at [Angular.js](https://angularjs.org/) and [Ember.js](http://emberjs.com/) that were trending among cool kids out there and that looked both promizing for us to manage an ambitious javascript application with our growing developpers team (by the way, [we are hiring!](http://wisembly.com/jobs)).
+We looked at [Angular.js](https://angularjs.org/) and [Ember.js](http://emberjs.com/) that were trending among cool kids out there and that looked both promizing for us to manage an ambitious javascript application with our growing developpers team (by the way, [we are hiring!](http://wisembly.com/jobs?utm_source=dev.blog)).
 
 After doing the famous [Todo MVC example](http://todomvc.com/) and some other POCs, we decided to go for Ember with [Ember-cli](http://www.ember-cli.com/).
 
-Here is our humble 3 months real life Ember.js feedback for [Solid](http://getsolid.io), what we have learnt, what we think is cool, what is really uncool and what could be improved.
+Here is our humble 3 months real life Ember.js feedback for [Solid](http://getsolid.io/?utm_source=dev.blog), what we have learnt, what we think is cool, what is really uncool and what could be improved.
 
 
 ## Ember.js
@@ -173,4 +173,4 @@ We are very happy with it at the time we write this article, and the future seam
 Ember.js really feels like something strong, complete and SOLID, which happens to be a perfect match for the apps we want to build now and in the near future.
 
 
-If you liked this blog post, please register to our [solid beta and next week challenge us on our application](http://getsolid.io). And maybe during this process, our product will help you organize even better scrum meetings!
+If you liked this blog post, please register to our [solid beta and next week challenge us on our application](http://getsolid.io/?utm_source=dev.blog). And maybe during this process, our product will help you organize even better scrum meetings!

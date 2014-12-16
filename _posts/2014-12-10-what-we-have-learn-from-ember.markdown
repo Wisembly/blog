@@ -37,13 +37,13 @@ It **feels right** to see in this javascript world with Ember the same benefits 
 ### What does that mean for your team and your productivity
 
 **Good points**
-- Your developpers will tend to produce more homogeneous code. That's a great thing for productivity, maintenance and scalability
-- New team members will already know Ember and will understand your code faster, they'll only have to look to your business code, no need for them to read and learn a framework related mechanism you could have developped inside your own framework
-- You won't have to maintain core parts of your code. Just keep your project Ember-up-to-date to benefit from the latest community features and improvements. Again, no time wasted in maintaining something a community could maintain for you.
+- Your developpers will tend to produce more homogeneous code. That's a great thing for productivity, maintenance and scalability  
+- New team members will already know Ember and will understand your code faster, they'll only have to look to your business code, no need for them to read and learn a framework related mechanism you could have developped inside your own framework  
+- You won't have to maintain core parts of your code. Just keep your project Ember-up-to-date to benefit from the latest community features and improvements. Again, no time wasted in maintaining something a community could maintain for you.  
 
 **Risks**
-- What happens if you integrate an Angular dev or a Backbone dev? Despite the fact that Ember and Angular differs in many ways, their root concepts are not that far, and the new "dev on the block" should feel at home within days (1-2 weeks max)
-- You should consider understanding and using "the ember way" to do things, before trying to customize or monkey patch them => think about tests, future upgrades, and glitches you should introduce in the app because "Hell yeah, I like to customize ALL THE THINGS"
+- What happens if you integrate an Angular dev or a Backbone dev? Despite the fact that Ember and Angular differs in many ways, their root concepts are not that far, and the new "dev on the block" should feel at home within days (1-2 weeks max)  
+- You should consider understanding and using "the ember way" to do things, before trying to customize or monkey patch them => think about tests, future upgrades, and glitches you should introduce in the app because "Hell yeah, I like to customize ALL THE THINGS"  
 
 
 ### The world is made of components

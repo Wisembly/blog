@@ -23,7 +23,7 @@ Here is our humble 3 months real life Ember.js feedback for [Solid](http://getso
 
 ### Convention over configuration
 
-**First of all, Ember is not like Backbone. It's a strongly opinionated MVC framework.**
+**First of all, what we struck us is that Ember is not like Backbone. It's a strongly opinionated MVC framework.**
 
 That means devs accepting to embrace Ember's philosophy will be rewarded by the framework after the learning curve, whereas more skeptical ones will keep on fighting against concepts they may consider odd and won't unlock the true framework potential. But hey, nothing new here, that's the same for every opinated framework in any language.
 

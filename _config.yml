@@ -16,7 +16,7 @@ authors:
     display_name:   guillaumepotier
     gravatar:       d9297b88ef842ae8ccc562ad3b4cc1e1
     email:          guillaume@wisembly.com
-    web:            http://imctobitch.com
+    web:            http://wisembly.com
     twitter:        guillaumepotier
     github:         guillaumepotier
 
@@ -37,3 +37,4 @@ version:            0.0.1
 urls:
   github:           https://github.com/wisembly
   corpo:            http://wisembly.com
+  solid:            http://getsolid.io

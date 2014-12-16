@@ -171,3 +171,6 @@ We are very happy with it at the time we write this article, and the future seam
 [Check the road to Ember.js 2.0](https://github.com/emberjs/rfcs/pull/15) and [the discussions about it](https://news.ycombinator.com/item?id=8551897) on HackerNews.
 
 Ember.js really feels like something strong, complete and SOLID, which happens to be a perfect match for the apps we want to build now and in the near future.
+
+
+If you liked this blog post, please register to our [solid beta and next week challenge us on our application](http://getsolid.io), and thanks to the Ember console inspector help us improve and challenge us. And maybe during this process, our product will help you organize even better scrum meetings!

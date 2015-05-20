@@ -13,7 +13,7 @@ To do so, the dev team chose to use various frameworks and task runner such as E
 In the front-end development of our 'older' app and for now, we used Grunt. But we saw that Gulp offers a lot of benefits: it is way faster and multitask. We decided to give it a try and took the occasion to make both workflows uniform.
 
 ### Less talk, more action!
-CSS optimization will be detailed in a further post. This post is about building a homemade iconfont with Sketch and Gulp. [By the way, you can fork this project on GitHub.](https://github.com/Wisembly/wisemblyiconfont)
+CSS optimization will be detailed in a further post. This post is about building a homemade iconfont with Sketch and Gulp. ~~By the way, you can fork this project on GitHub.~~ [New project here!](https://github.com/Wisembly/tapestry)
 
 We had some constraints like supporting IE7/8. It means that you have to build SVG, WOFF and... EOT. You will notice the original task is building SVG, WOFF, TTF and EOT:
 

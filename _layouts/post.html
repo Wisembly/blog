@@ -1,56 +1,59 @@
 ---
 layout: default
 ---
+<div class="ContentWrapper">
 
-<div class="post">
-  <h2 class="post-title">{{ page.title }}</h2>
-  <span class="post-date">{{ page.date | date_to_string }}</span>
-  {{ content }}
-</div>
+  <div class="Box">
+    <div class="Box-cover" style="background-image: url({{ page.thumbnail }});"></div>
+    <header class="Box-header">
+      <h3 class="Box-title">{{ page.title }}</h3>
+      <p class="t-caption">{{ page.date | date_to_string }}</p>
+    </header>
+    <div class="Box-content">
+      {{ content }}
+    </div>
+    <div class="Box-footer">
+      <figure class="Media">
+        <img class="Media-img Avatar Avatar--l" src="http://www.gravatar.com/avatar/{{ site.authors[page.author].gravatar }}?s=60" />
+        <figcaption class="Media-content u-pdl--m">
+          <h5 class="u-mgt--0">
+            {% if site.authors[page.author] %}
+              {{ site.authors[page.author].name }}
+            {% else %}
+              {{ page.author }}
+            {% endif %}
+          </h5>
+          <ul class="r-list">
+          {% if site.authors[page.author].twitter %}
+            <li><span class="t-neutral">Twitter: </span><a target="_blank" href="http://twitter.com/{{ site.authors[page.author].twitter }}">@{{ site.authors[page.author].twitter }}</a></li>
+          {% endif %}
+          {% if site.authors[page.author].github %}
+            <li><span class="t-neutral">GitHub: </span><a target="_blank" href="http://github.com/{{ site.authors[page.author].github }}">{{ site.authors[page.author].github }}</a></li>
+          {% endif %}
+          </ul>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
 
-<div class="author">
-  <span class="gravatar">
-      <img src="http://www.gravatar.com/avatar/{{ site.authors[page.author].gravatar }}?s=60"/>
-  </span>
-  <span class="name">
-      <strong>{% if site.authors[page.author] %}{{ site.authors[page.author].name }}{% else %}{{ page.author }}{% endif %}</strong>
-      <br/>
-      {% if site.authors[page.author].twitter %}
-        <a target="_blank" href="http://twitter.com/{{ site.authors[page.author].twitter }}">@{{ site.authors[page.author].twitter }}</a>
-      {% endif %}
-      {% if site.authors[page.author].twitter %}
-        <br/><a target="_blank" href="{{ site.authors[page.author].web }}">{{ site.authors[page.author].web }}</a>
-      {% endif %}
-  </span>
-</div>
+  {% include discus.html %}
 
-<span class="clearfix"></span>
+  <div class="Line Line--labeled">
+    <div class="Line-label">Related posts</div>
+  </div>
 
-<div class="related">
-  <h2>Related Posts</h2>
-  <ul class="related-posts">
+  <div class="Boxes">
     {% for post in site.related_posts limit:site.related_limit %}
-      <li>
-        <h3>
-          <a href="{{ post.url }}">
-            {{ post.title }}
-            <small>{{ post.date | date_to_string }}</small>
-          </a>
-        </h3>
-      </li>
+    <div class="Box">
+      <div class="Box-header">
+        <p class="t-title"><a href="{{ post.url }}">{{ post.title }}</a></p>
+      </div>
+      <div class="Box-content">
+        <p class="t-caption">Posted on {{ post.date | date_to_string }}</p>
+        <p class="t-caption">— by {{ site.authors[post.author].name }}</p>
+      </div>
+    </div>
     {% endfor %}
-  </ul>
+  </div>
+
 </div>
-
-<span class="clearfix"></span>
-
-<div id="disqus_thread"></div>
-<script type="text/javascript">
-  var disqus_shortname = 'wisemblydev';
-  (function() {
-    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-  })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>

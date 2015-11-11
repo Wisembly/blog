@@ -1,0 +1,22 @@
+<div class="Topbar">
+  <h1 class="Topbar-title">{{ site.title }}</h1>
+  <a class="Topbar-link" href="/"><i class="Icon Icon--wisemblyFull Topbar-icon"></i><span class="Topbar-name"> dev blog</span></a>
+  <nav class="Topbar-nav">
+    <div class="Dropdown Topbar-dropdown" data-tapestry="dropdown">
+      <button type="button" class="Dropdown-toggle Btn Btn--raw Topbar-btn" aria-expanded="false">Our products</button>
+      <ul class="Dropdown-list Dropdown-list--bc">
+        {% for item in site.menu_products %}
+          <li><a class="Dropdown-item" href="{{ item.link }}" target="_blank">{{ item.name }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="Dropdown Topbar-dropdown" data-tapestry="dropdown">
+      <button type="button" class="Dropdown-toggle Btn Btn--raw Topbar-btn" aria-expanded="false">Open-source projects</button>
+      <ul class="Dropdown-list Dropdown-list--bc">
+        {% for item in site.menu_opensource %}
+          <li><a class="Dropdown-item" href="{{ item.link }}" target="_blank">{{ item.name }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+  </nav>
+</div>

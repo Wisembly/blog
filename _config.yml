@@ -1,14 +1,17 @@
 # Dependencies
 markdown:           redcarpet
-highlighter:        pygments
+redcarpet:
+  extensions:       ["strikethrough"]
+
+gems: [jekyll-paginate]
 
 # Permalinks
 permalink:          pretty
 
 # Setup
-title:              Wisembly
+title:              Wisembly dev blog
 tagline:            'Ideas are everywhere'
-description:        'Random Wisembly developpers thoughts and more or less useful findings..'
+description:        'Random Wisembly developpers thoughts and more or less useful findings…'
 
 authors:
   guillaumepotier:
@@ -16,7 +19,6 @@ authors:
     display_name:   guillaumepotier
     gravatar:       d9297b88ef842ae8ccc562ad3b4cc1e1
     email:          guillaume@wisembly.com
-    web:            http://wisembly.com
     twitter:        guillaumepotier
     github:         guillaumepotier
 
@@ -34,7 +36,18 @@ related_limit:      3
 # Custom vars
 version:            0.0.1
 
-urls:
-  github:           https://github.com/wisembly
-  corpo:            http://wisembly.com
-  solid:            http://getsolid.io
+menu_products:
+  - name: Wisembly
+    link: http://wisembly.com
+  - name: Solid
+    link: http://getsolid.io
+
+menu_opensource:
+  - name: ParsleyJS
+    link: http://parsleyjs.org
+  - name: Tapestry
+    link: http://tapestry.wisembly.com
+  - name: CalendArt
+    link: https://github.com/Wisembly/CalendArt
+  - name: Elephant.io
+    link: http://elephant.io/

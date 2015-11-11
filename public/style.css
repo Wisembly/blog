@@ -1,0 +1,116 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+
+body {
+  font-family: Open Sans;
+  background: #ebeeef;
+}
+
+.Topbar {
+  background: #07698d;
+  padding: 21px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 42px;
+}
+
+.Topbar-title {
+  display: none;
+}
+
+.Topbar-icon {
+  font-size: 30px;
+}
+
+.Topbar-name {
+  font-size: 22px;
+  line-height: 20px;
+  color: #aed7e8;
+  vertical-align: top;
+}
+
+.Topbar-link {
+  color: #fff;
+  padding: 5px 10px;
+}
+
+.Topbar-dropdown + .Topbar-dropdown {
+  border-left: 1px solid #aed7e8;
+}
+
+.Topbar-btn {
+  color: #fff;
+}
+
+.Topbar-btn:hover {
+  color: #aed7e8;
+}
+
+.Footer {
+  margin-top: 42px;
+  background: #3a434c;
+  padding: 21px;
+  text-align: center;
+  font-size: 10px;
+  color: #fff;
+}
+
+.Footer-link {
+  color: #fff;
+}
+
+.ContentWrapper {
+  width: 90%;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+pre {
+  border-radius: 6px;
+  background: #3a434c;
+  padding: 10px;
+  color: #ebeeef;
+}
+
+.Box-footer {
+  border-top: 1px solid #d5d9da;
+  padding: 21px;
+}
+
+.Pagination {
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+
+.Box-cover {
+  height: 300px;
+  display: block;
+  background-size: cover;
+  background-position: center center;
+}
+
+@media screen and (max-width: 600px) {
+  .Boxes {
+    flex-wrap: wrap;
+  }
+
+  .Boxes > .Box {
+    width: 100%;
+    flex: 1 0 auto;
+  }
+
+  .Topbar {
+    display: block;
+    text-align: center;
+  }
+
+  .Topbar-nav {
+    margin-top: 20px;
+  }
+
+  .Topbar-btn {
+    padding: 5px 20px;
+  }
+}

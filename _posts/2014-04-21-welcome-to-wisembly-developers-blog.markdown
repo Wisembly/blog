@@ -1,6 +1,7 @@
 ---
 layout:     post
 title:      "Welcome to Wisembly developers blog"
+thumbnail:  "/public/images/team.jpg"
 categories:
   - general
 author:     guillaumepotier

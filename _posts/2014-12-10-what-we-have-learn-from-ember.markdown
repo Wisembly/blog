@@ -1,6 +1,7 @@
 ---
 layout:     post
 title:      "What we've learn from Ember.js after 2 months developing our new product. A Solid story"
+thumbnail:  "/public/images/ember.jpg"
 categories:
   - general
   - ember
@@ -62,13 +63,13 @@ Ember 2.0 will put even more emphasis on components!
 
 Before digging deeper into Ember, we heard about its famous "learning curve". Some said it is like climbing a mountain, some compare it to a roller coaster. We tried and we must admit, it's pretty heavy and almost sinusoidal, but really worth to surf.
 
-We've had bad days and good days. We've had questions and we still have questions...
+We've had bad days and good days. We've had questions and we still have questions…
 
 The first of these questions is about [Ember Data](https://github.com/emberjs/data). It's an awesome library, no doubt about it: well documented, very active, and strong / stable enough for what we want to build.
 But the fact is that our APIs are not fully compatible with it: not fully "JSON API" compliant, and not very modifiable, since they are shared accross our products. Since Ember Data is not very permissive, we've had some headaches. That's why we are wondering if we shall build our own data store/cache/api layer.
 
 In some cases, we still wonder where is the best place to do things and how to do it.
-For example, let's say you have to implement a global notification center for your app: we're still investigating and iterating to find the best way to do it... Even if a "service" is what sounds like to be the best idea, it is not as simple as it seem...
+For example, let's say you have to implement a global notification center for your app: we're still investigating and iterating to find the best way to do it… Even if a "service" is what sounds like to be the best idea, it is not as simple as it seem…
 
 How does it interact with push events (we make a heavy use of [socket.io](http://socket.io/) ? How does it interact with the "bubbling" of Ember actions ? What if a component has to notify the app of its state ? What if you want your models to auto-notify the user when they are saved / errored ?
 We implemented all of these behaviors but we are not very sure if we did it the right way, and trying to find better methods every day (ok, finally it's pretty normal for devs ^^)
@@ -86,7 +87,7 @@ The coolest point about Ember-cli is its EcmaScript6 transpiler, clearly. It's r
 
 Besides, it provides a full development environment with server, automatic incremental build with Broccoli, live watch and reload, tests & jshint.
 
-Ember cli is bundled with lots of cool generators following "blueprints" rules that allow you to keep up a good workflow (create the right files, at the right place, create the corresponding basic tests, etc...). There is no way to make a mistake when using generators, which is a very good point for scaling (product + team). Blueprints can be created, so every team can reproduce its own workflow
+Ember cli is bundled with lots of cool generators following "blueprints" rules that allow you to keep up a good workflow (create the right files, at the right place, create the corresponding basic tests, etc…). There is no way to make a mistake when using generators, which is a very good point for scaling (product + team). Blueprints can be created, so every team can reproduce its own workflow
 
 In addition, Ember-cli brings its own resolver that provides/allows a way better file architecture (PODs are also possible)
 
@@ -98,10 +99,10 @@ Version 0.1.3 will let you create multiple sets of CSS files. To start with, we'
 
 ### Not very cool points
 
-Despite, Broccoli has really cool sides, the Brocfile is a bit complicated, and our frontend team is a little reserved. This lacks some documentation too...
+Despite, Broccoli has really cool sides, the Brocfile is a bit complicated, and our frontend team is a little reserved. This lacks some documentation too…
 
 In addition, Broccoli looks like to be quite slow and less flexible compared to Gulp: the fact that it recompiles everything, including JS even if you change only a line of CSS is not good at all.
-Thus, CSS is too long to be live reloaded and there is no CSS injection (but it might change very soon => [see issue #2371 on ember-cli repo](https://github.com/stefanpenner/ember-cli/issues/2371))
+Thus, CSS is too long to be live reloaded and there is no CSS injection (but it might change very soon → [see issue #2371 on ember-cli repo](https://github.com/stefanpenner/ember-cli/issues/2371))
 
 To finish, the upgrade process can be a real P.I.A (this is a very very perfectible thing)
 
@@ -127,7 +128,7 @@ Ember Data comes with various adapters for multiple usage ways (Want to use fixt
 
 It also comes with various methods to easily manage models and records
 
-We particularly like records flags (isNew, isDirty, isSaving, etc....), it's a fantastic feature !
+We particularly like records flags (isNew, isDirty, isSaving, etc…), it's a fantastic feature !
 
 ### Not very cool points
 
@@ -155,7 +156,7 @@ We clearly did not had time to dig deeper the tests more than in the docs, we'll
 ## Ember Inspector
 A ~~very cool~~ mandatory chrome plugin to help you debug your ember.js app.
 
-Review your views / routes structure, check the loaded data in the blink of an eye, analyze the rendering performance, find everything in your container, etc...
+Review your views / routes structure, check the loaded data in the blink of an eye, analyze the rendering performance, find everything in your container, etc…
 
 
 ## The runLoop

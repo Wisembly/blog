@@ -1,21 +1,27 @@
 ---
 layout:     post
 title:      "Building an iconfont from Sketch to Gulp"
+thumbnail:  "/public/images/font.jpg"
 categories:
   - frontend
 author:     gabrielcousin
 ---
 
-In September, Wisembly started the development of a new product, which will transform your small meetings. Teasing!
+~~In September, Wisembly started the development of a new product, which will transform your small meetings. Teasing!~~
+**After several months of private beta testing and improvements, you are now free to use [Solid](http://getsolid.io).**
 
 To do so, the dev team chose to use various frameworks and task runner such as Ember, Broccoli and Gulp.
 
 In the front-end development of our 'older' app and for now, we used Grunt. But we saw that Gulp offers a lot of benefits: it is way faster and multitask. We decided to give it a try and took the occasion to make both workflows uniform.
 
 ### Less talk, more action!
-CSS optimization will be detailed in a further post. This post is about building a homemade iconfont with Sketch and Gulp. [By the way, you can fork this project on GitHub.](https://github.com/Wisembly/wisemblyiconfont)
+CSS optimization will be detailed in a further post. This post is about building a homemade iconfont with Sketch and Gulp.
 
-We had some constraints like supporting IE7/8. It means that you have to build SVG, WOFF and... EOT. You will notice the original task is building SVG, WOFF, TTF and EOT:
+~~[By the way, you can fork this project on GitHub.](https://github.com/Wisembly/wisemblyiconfont)~~
+
+**This repo is no more maintained. We use the same *but updated* workflow on our CSS framework [Tapestry](http://github.com/Wisembly/tapestry)**
+
+We had some constraints like supporting IE7/8. It means that you have to build SVG, WOFF and… EOT. You will notice the original task is building SVG, WOFF, TTF and EOT:
 
 1. [SVG fonts](http://caniuse.com/#feat=svg-fonts) are only supported by Safari and Android browsers.
 2. [WOFF](http://caniuse.com/#feat=woff) is well supported (excepted IE8)
